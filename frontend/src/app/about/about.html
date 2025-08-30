@@ -1,0 +1,45 @@
+<div class="min-h-screen bg-gray-900/80 flex flex-col items-center justify-center px-6 py-12">
+  <!-- Card Container -->
+  <div class="max-w-4xl w-full bg-white rounded-2xl shadow-lg p-10 relative overflow-hidden">
+    
+    <!-- Background decoration -->
+    <div class="absolute -top-16 -right-16 w-72 h-72 bg-indigo-100 rounded-full blur-3xl opacity-50"></div>
+    <div class="absolute -bottom-16 -left-16 w-72 h-72 bg-purple-100 rounded-full blur-3xl opacity-50"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center">
+      <h1 class="text-4xl font-extrabold text-gray-800 mb-4">About Us</h1>
+      <p class="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+        Welcome to our platform! 🚀  
+        We are passionate about building modern web applications that connect people and solve real-world problems.  
+        Our mission is to create an easy-to-use and powerful experience for users worldwide.
+      </p>
+
+      <!-- Features Grid -->
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 bg-gray-100 rounded-xl shadow-sm hover:shadow-md transition">
+          <h3 class="text-xl font-semibold text-indigo-600 mb-2">💡 Innovation</h3>
+          <p class="text-gray-600">We bring fresh ideas and modern technology into everything we build.</p>
+        </div>
+
+        <div class="p-6 bg-gray-100 rounded-xl shadow-sm hover:shadow-md transition">
+          <h3 class="text-xl font-semibold text-purple-600 mb-2">🤝 Collaboration</h3>
+          <p class="text-gray-600">Teamwork and transparency are at the heart of our success.</p>
+        </div>
+
+        <div class="p-6 bg-gray-100 rounded-xl shadow-sm hover:shadow-md transition">
+          <h3 class="text-xl font-semibold text-pink-600 mb-2">🌍 Impact</h3>
+          <p class="text-gray-600">We focus on creating solutions that make a difference globally.</p>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-12">
+        <button
+          class="px-8 py-3 bg-indigo-600 text-white rounded-full text-lg font-medium shadow hover:bg-indigo-700 transition" (click)="navigateToContact()">
+          Contact Us
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

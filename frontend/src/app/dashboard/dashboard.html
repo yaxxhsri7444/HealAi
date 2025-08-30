@@ -1,0 +1,50 @@
+<div class="p-6 min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white">
+
+  <!-- Title -->
+  <h2 class="text-3xl font-bold mb-10 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
+    Mood Analytics Dashboard
+  </h2>
+
+  <!-- Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <div class="p-6 rounded-2xl shadow-xl bg-white/10 backdrop-blur-lg border border-white/20 text-center">
+      <h3 class="text-xl font-semibold text-green-400">Happy 😊</h3>
+      <p class="text-5xl font-bold text-green-300 mt-2">{{ moodsCount.happy }}</p>
+    </div>
+    <div class="p-6 rounded-2xl shadow-xl bg-white/10 backdrop-blur-lg border border-white/20 text-center">
+      <h3 class="text-xl font-semibold text-red-400">Sad 😢</h3>
+      <p class="text-5xl font-bold text-red-300 mt-2">{{ moodsCount.sad }}</p>
+    </div>
+    <div class="p-6 rounded-2xl shadow-xl bg-white/10 backdrop-blur-lg border border-white/20 text-center">
+      <h3 class="text-xl font-semibold text-gray-400">Neutral 😐</h3>
+      <p class="text-5xl font-bold text-gray-300 mt-2">{{ moodsCount.neutral }}</p>
+    </div>
+  </div>
+
+  <!-- Chart -->
+  <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl shadow-xl mb-12">
+    <h3 class="text-lg font-semibold mb-4 text-purple-300">Mood Distribution</h3>
+    <canvas baseChart 
+      data="moodChartData" 
+      type="moodChartType"
+      options="moodChartOptions">
+    </canvas>
+  </div>
+
+  <!-- Recent Conversations -->
+  <h3 class="text-lg font-semibold mb-6 text-pink-300">Recent Conversations</h3>
+  <ul class="space-y-4">
+    <li *ngFor="let chat of chats" 
+        class="bg-white/10 backdrop-blur-lg border border-white/20 p-5 rounded-2xl shadow hover:scale-[1.01] transition-transform">
+      <p><span class="font-semibold text-purple-300">You:</span> {{chat.message}}</p>
+      <p><span class="font-semibold text-blue-300">AI:</span> {{chat.reply}}</p>
+      <span [ngClass]="{
+        'text-green-400': chat.mood === 'happy',
+        'text-red-400': chat.mood === 'sad',
+        'text-gray-400': chat.mood === 'neutral'
+      }" class="text-sm font-medium mt-2 inline-block">
+        Mood: {{chat.mood}}
+      </span>
+    </li>
+  </ul>
+</div>

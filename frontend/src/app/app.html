@@ -1,0 +1,52 @@
+<!-- Header -->
+<header
+  class="sticky top-0 z-40 bg-gray-900/80 backdrop-blur border-b border-gray-700"
+>
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a routerLink="/" class="flex items-center gap-2">
+      <span
+        class="h-8 w-8 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 inline-block shadow-md"
+      ></span>
+      <span class="font-semibold text-gray-100">HealAi</span>
+    </a>
+
+    <nav class="flex items-center gap-5 text-gray-300">
+      <a
+        routerLink="/chat"
+        class="cursor-pointer hover:text-white hover:underline transition"
+        >Chat</a
+      >
+      <a
+        routerLink="/dashboard"
+        class="cursor-pointer hover:text-white hover:underline transition"
+        >Dashboard</a
+      >
+      <a
+        routerLink="/about"
+        class="cursor-pointer hover:text-white hover:underline transition"
+        >About</a
+      >
+
+      <!-- Auth Buttons -->
+      <button
+        (click)="logout()"
+        *ngIf="!auth.isLoggedIn()"
+        class="cursor-pointer px-3 py-1.5 rounded-xl bg-slate-200/20 hover:bg-slate-700 text-white transition"
+      >
+        Logout
+      </button>
+      <a
+        routerLink="/login"
+        *ngIf="auth.isLoggedIn()"
+        class="cursor-pointer px-3 py-1.5 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md hover:scale-105 transition"
+        >Login</a
+      >
+    </nav>
+  </div>
+</header>
+
+<!-- Main -->
+<main class="w-full h-[calc(100vh-64px)]">
+  <!-- Fullscreen Router Content -->
+  <router-outlet></router-outlet>
+</main>

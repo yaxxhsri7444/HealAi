@@ -1,0 +1,149 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background: linear-gradient(135deg, #1d2671, #c33764); */
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 350px;
+  text-align: center;
+  /* color: white; */
+  border: #0f172b;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+
+  h2 {
+    color: #0f172b;
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 25px;
+    opacity: 0.8;
+  }
+
+  .input-group {
+    margin: 15px 0;
+
+    label {
+      display: block;
+      text-align: left;
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #0f172b;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #0f172b;
+      border-radius: 10px;
+      outline: none;
+      font-size: 14px;
+      /* border: 2px #0f172b; */
+      background:white;
+      color: #0f172b;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+
+  .forgot-password {
+    text-align: right;
+    margin-bottom: 15px;
+
+    a {
+      font-size: 13px;
+      color: #0f172b;
+      text-decoration: none;
+      transition: 0.3s;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .btn-login {
+    width: 100%;
+    padding: 12px;
+    background: #0f172b;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.3s;
+
+    &:hover {
+      background: white;
+      color: #0f172b;
+      border: 2px solid #0f172b;
+    }
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+
+    span {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+  }
+
+  .btn-google {
+    width: 100%;
+    padding: 12px;
+    background: white;
+    border: none;
+    border-radius: 10px;
+    color: #0f172b;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+
+    &:hover {
+      background: #f5f5f5;
+    }
+
+    img {
+      width: 20px;
+    }
+  }
+
+  .switch-auth {
+    font-size: 14px;
+    margin-top: 10px;
+
+    a {
+      color: #0f172b;
+      text-decoration: none;
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

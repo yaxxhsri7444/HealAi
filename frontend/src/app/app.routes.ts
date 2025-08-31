@@ -10,8 +10,7 @@ export const routes: Routes = [
     {path: 'chat', component: Chat},
     {path: 'dashboard', component: Dashboard},
     {path: 'about', component: About},
-    {path: ' ', pathMatch: 'full', redirectTo: 'chat'},
-    // {path: '**', redirectTo: 'chat'},
+    {path: ' ', pathMatch: 'full', redirectTo: 'login'},
     {path: 'register', component: Register},
 
 ];

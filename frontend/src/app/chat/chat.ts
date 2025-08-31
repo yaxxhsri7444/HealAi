@@ -27,7 +27,7 @@ export class Chat {
   sendMessage(): void {
     if (!this.newMessage.trim()) return;
 
-    // 1. Add user message in UI instantly
+    
     const userMsg: ChatMessage = {
       sender: 'user',
       text: this.newMessage,
@@ -39,7 +39,7 @@ export class Chat {
     this.newMessage = '';
     this.loading = true;
 
-    // 2. Send message to backend
+    
     this.chatService.sendMessage(messageToSend).subscribe({
       next: (res) => {
         const aiMsg: ChatMessage = {

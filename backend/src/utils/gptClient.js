@@ -1,8 +1,7 @@
-// utils/gptClient.js
 import fetch from "node-fetch";
 
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY; // do not hardcode keys
-const MODEL = "gemini-2.0-flash"; // or "gemini-1.5-flash"
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+const MODEL = "gemini-2.0-flash"; 
 
 export async function getGeminiResponse(history = []) {
   try {

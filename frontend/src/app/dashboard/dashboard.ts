@@ -51,7 +51,9 @@ export class Dashboard implements OnInit{
 
   loadChats() {
     this.chat.getChats().subscribe(
-      (res) => this.chats = res
+      (res) => {
+        this.chats = Array.isArray(res) ? res : Object.values(res);
+      }
     );
   }
 }

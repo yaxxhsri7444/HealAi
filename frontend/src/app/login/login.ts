@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
 export class Login {
   email: string = '';
   password: string = '';
-
+  
   constructor(private auth: AuthService) {}
   onLogin() {
     this.auth.login({ email: this.email, password: this.password }).subscribe({
@@ -26,5 +26,15 @@ export class Login {
         alert(err.error.message);
       },
     });
+  }
+
+  togglePasswordVisibility() {
+    const passwordInput = document.getElementById('password') as HTMLInputElement;
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+    } else {
+      passwordInput.type = 'password';
+    } 
+    
   }
 }

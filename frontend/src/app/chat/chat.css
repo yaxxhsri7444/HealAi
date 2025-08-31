@@ -1,4 +1,4 @@
-/* .custom-scrollbar::-webkit-scrollbar {
+.custom-scrollbar::-webkit-scrollbar {
   width: 6px;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
@@ -7,4 +7,4 @@
 }
 .custom-scrollbar::-webkit-scrollbar-track {
   background: transparent;
-} */
+}

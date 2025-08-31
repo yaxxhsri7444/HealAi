@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class About {
   navigateToContact() {
-    window.location.href = '/contact';
-  }
+    window.open("mailto: srivastavasaksham243@gmail.com")
+   }
 
 }

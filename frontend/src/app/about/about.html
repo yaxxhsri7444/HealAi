@@ -1,42 +1,49 @@
-<div class="min-h-screen bg-gray-900/80 flex flex-col items-center justify-center px-6 py-12">
-  <!-- Card Container -->
-  <div class="max-w-4xl w-full bg-white rounded-2xl shadow-lg p-10 relative overflow-hidden">
-    
-    <!-- Background decoration -->
-    <div class="absolute -top-16 -right-16 w-72 h-72 bg-indigo-100 rounded-full blur-3xl opacity-50"></div>
-    <div class="absolute -bottom-16 -left-16 w-72 h-72 bg-purple-100 rounded-full blur-3xl opacity-50"></div>
+<div class="relative min-h-screen bg-gray-950 flex flex-col items-center justify-center px-6 py-12 overflow-hidden">
+
+  <!-- Animated Gradient Particles -->
+  <div class="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
+    <div class="particle bg-gradient-to-r from-purple-500 to-pink-500"></div>
+    <div class="particle bg-gradient-to-r from-indigo-400 to-purple-500"></div>
+    <div class="particle bg-gradient-to-r from-pink-400 to-purple-600"></div>
+    <div class="particle bg-gradient-to-r from-purple-600 to-indigo-400"></div>
+  </div>
+
+  <!-- Content Card -->
+  <div class="max-w-5xl w-full bg-gray-900/60 backdrop-blur-2xl rounded-3xl shadow-2xl p-12 relative z-10">
+
+    <!-- Floating Gradient Circles -->
+    <div class="absolute -top-20 -right-20 w-80 h-80 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full blur-3xl opacity-40 animate-pulse-slow"></div>
+    <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full blur-3xl opacity-40 animate-pulse-slow"></div>
 
     <!-- Content -->
     <div class="relative z-10 text-center">
-      <h1 class="text-4xl font-extrabold text-gray-800 mb-4">About Us</h1>
-      <p class="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
-        Welcome to our platform! 🚀  
-        We are passionate about building modern web applications that connect people and solve real-world problems.  
-        Our mission is to create an easy-to-use and powerful experience for users worldwide.
+      <h1 class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-6">About HealAi</h1>
+      <p class="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto">
+        Welcome to <span class="text-purple-400 font-semibold">HealAi</span>! 🚀  
+        We create AI-powered solutions that connect technology with well-being, delivering intuitive experiences for everyone.
       </p>
 
       <!-- Features Grid -->
-      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="p-6 bg-gray-100 rounded-xl shadow-sm hover:shadow-md transition">
-          <h3 class="text-xl font-semibold text-indigo-600 mb-2">💡 Innovation</h3>
-          <p class="text-gray-600">We bring fresh ideas and modern technology into everything we build.</p>
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-gray-800/60 backdrop-blur-lg rounded-2xl shadow-lg hover:scale-105 transition-transform">
+          <h3 class="text-xl font-semibold text-indigo-400 mb-3">💡 Innovation</h3>
+          <p class="text-gray-300">Cutting-edge AI and web technologies in every solution we build.</p>
         </div>
-
-        <div class="p-6 bg-gray-100 rounded-xl shadow-sm hover:shadow-md transition">
-          <h3 class="text-xl font-semibold text-purple-600 mb-2">🤝 Collaboration</h3>
-          <p class="text-gray-600">Teamwork and transparency are at the heart of our success.</p>
+        <div class="p-6 bg-gray-800/60 backdrop-blur-lg rounded-2xl shadow-lg hover:scale-105 transition-transform">
+          <h3 class="text-xl font-semibold text-purple-400 mb-3">🤝 Collaboration</h3>
+          <p class="text-gray-300">Teamwork and transparency drive our success and innovation.</p>
         </div>
-
-        <div class="p-6 bg-gray-100 rounded-xl shadow-sm hover:shadow-md transition">
-          <h3 class="text-xl font-semibold text-pink-600 mb-2">🌍 Impact</h3>
-          <p class="text-gray-600">We focus on creating solutions that make a difference globally.</p>
+        <div class="p-6 bg-gray-800/60 backdrop-blur-lg rounded-2xl shadow-lg hover:scale-105 transition-transform">
+          <h3 class="text-xl font-semibold text-pink-400 mb-3">🌍 Global Impact</h3>
+          <p class="text-gray-300">AI solutions that make a meaningful difference worldwide.</p>
         </div>
       </div>
 
-      <!-- CTA -->
+      <!-- Contact Button -->
       <div class="mt-12">
         <button
-          class="px-8 py-3 bg-indigo-600 text-white rounded-full text-lg font-medium shadow hover:bg-indigo-700 transition" (click)="navigateToContact()">
+          class="px-10 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-lg font-semibold shadow-lg hover:scale-105 hover:shadow-pink-500/50 transition-transform"
+          (click)="navigateToContact()">
           Contact Us
         </button>
       </div>

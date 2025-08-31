@@ -35,7 +35,8 @@ export class ChatService {
   }
 
   getMoodSummary(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/mood-stats`);
+
+    return this.http.get(`${this.apiUrl}/mood-stats`,{headers: this.getAuthHeaders()});
   }
 }
 

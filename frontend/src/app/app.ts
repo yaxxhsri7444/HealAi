@@ -10,8 +10,12 @@ import { AuthService } from './services/auth';
   styleUrl: './app.css'
 })
 export class App {
-constructor(public auth: AuthService) {}
+  mobileMenuOpen: boolean = false;
+  constructor(public auth: AuthService) {}
   logout() {
-     this.auth.logout();
-     }
+    this.auth.logout();
+  }
+  toggleMobileMenu() {
+    this.mobileMenuOpen = !this.mobileMenuOpen;
+  }
 }

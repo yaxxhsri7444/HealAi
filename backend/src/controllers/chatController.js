@@ -1,4 +1,3 @@
-// controllers/chatController.js
 import Chat from "../models/chat.js";
 import { getGeminiResponse } from "../utils/gptClient.js";
 import { analyzeMood } from "../utils/sentiment.js";
@@ -12,7 +11,7 @@ export const sendMessage = async (req, res) => {
       return res.status(400).json({ msg: "Message is required" });
     }
 
-    // fetch recent context (e.g., last 10)
+    
     const recent = await Chat.find({ user: userId })
       .sort({ createdAt: -1 })
       .limit(10)
@@ -45,15 +44,15 @@ export const sendMessage = async (req, res) => {
   }
 };
 
-// controllers/chatController.js
+
 export const getDashboard = async (req, res) => {
   try {
     const userId = req.user.id;
 
-    // User ke sare chats
+    
     const chats = await Chat.find({ user: userId }).sort({ createdAt: -1 });
 
-    // Mood count
+  
     const moodStats = await Chat.aggregate([
       { $match: { user: userId } },
       { $group: { _id: "$mood", count: { $sum: 1 } } },
@@ -61,7 +60,7 @@ export const getDashboard = async (req, res) => {
 
     res.json({
       totalChats: chats.length,
-      recentChats: chats.slice(0, 5), // latest 5 chats
+      recentChats: chats.slice(0, 5), 
       moodStats,
     });
   } catch (err) {

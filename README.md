@@ -18,7 +18,7 @@ It uses **AI-powered chat responses** along with **mood detection** to help user
 ## 🖼️ UI Demo  
 
 🎥 Check out the project in action:  
-👉 [Add your video link here (YouTube / Loom / Drive)]  
+👉 [https://heal-ai-9eab7.web.app]  
 
 ---
 
